@@ -1,16 +1,40 @@
-# mist_app
+# Student Portal App — Advanced Level
 
-A new Flutter project.
+Мобільний додаток «Студентський міні-портал», розроблений на базі фреймворку Flutter з повною інтеграцією хмарних сервісів Firebase. Проєкт виконано з дотриманням принципів чистої архітектури, реактивного програмування та сучасних стандартів UI/UX.
 
-## Getting Started
+## Основний функціонал
 
-This project is a starting point for a Flutter application.
+Додаток складається з шести взаємопов'язаних модулів, що утворюють єдиний екопростір для студента:
 
-A few resources to get you started if this is your first Flutter project:
+1. Автентифікація (Firebase Auth) — Система безпечного входу та реєстрації користувачів через Email/Password. Реалізовано збереження сесії та захищений доступ до персональних даних.
+2. Home Screen (Головна) — Центральна панель із персоналізованим привітанням та розширеним описом призначення додатка, що відповідає вимогам до композиції інтерфейсу.
+3. Tasks Manager (Firestore CRUD) — Динамічний модуль керування завданнями. Підтримує створення, редагування та видалення задач із миттєвою синхронізацією з хмарою в режимі реального часу.
+4. Student Profile — Цифрова картка студента з можливістю редагування інформації та завантаженням аватара у Firebase Storage. Реалізована надійна обробка порожніх станів для нових користувачів.
+5. Health Tracker — Модуль підтримки здорових звичок: інтерактивний трекер водного балансу з веденням історії логів у Firestore.
+6. Focus Zone (Pomodoro) — Кастомний таймер для продуктивного навчання, реалізований через складну логіку управління станами StatefulWidget.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Технологічний стек
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Frontend: Flutter (Dart) — StatefulWidget, StreamBuilder для реактивного оновлення UI.
+* Backend: 
+    * Firebase Auth: Аутентифікація та безпека.
+    * Cloud Firestore: NoSQL база даних для зберігання завдань та профілів.
+    * Firebase Storage: Хмарне сховище для медіафайлів.
+* Оптимізація: Безпечна робота з асинхронними викликами через перевірки context.mounted та використання актуальних методів стилізації withValues.
+
+## Встановлення та запуск
+
+1.  **Клонуйте репозиторій:**
+    ```bash
+    git clone [https://github.com/Juliaaa-Pavlenko/student_portal_app.git](https://github.com/Juliaaa-Pavlenko/student_portal_app.git)
+    ```
+2.  **Завантажте залежності:**
+    ```bash
+    flutter pub get
+    ```
+3.  **Запустіть додаток:**
+    ```bash
+    flutter run
+    ```
+
+**Розроблено в рамках навчального курсу з мобільної розробки (Advanced Level).**
